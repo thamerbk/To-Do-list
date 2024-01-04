@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TO DO LIST</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="">
+  <div id="main" class="card">
+    <input class="check" type="checkbox" id="checkbox">
+    <label class="lab" for="checkbox">
+      <div class="ball"></div>
+    </label>
+    <div class="box-add">
+      <p>Task List</p>
+      <div class="input">
+        <input type="text" id="add">
+        <label class="add-text" for="add">New Task</label>
+        <span></span>
+      </div>
+      <button class="btn1">ADD TASK</button>
+    </div>
+    <span class="line"></span>
+    <div class="box-tasks">
+      <p>Tasks</p>
+      <div class="filter">
+        <input type="text" id="filter">
+        <label class="add-filter" for="filter">FIlter Tasks</label>
+        <span></span>
+      </div>
+      <div class="tasks">
+      </div>
+      <button class="btn2">CLEAR ALL</button>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html>
