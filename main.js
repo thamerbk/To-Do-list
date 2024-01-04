@@ -9,7 +9,6 @@ let btn2 = document.querySelector(".btn2");
 let tasks = document.querySelector(".tasks");
 
 let check = document.querySelector(".check");
-let card = document.getElementById("main");
 
 add.onfocus = function () {
   // addText.className += " up";         // another way to add class name
@@ -39,7 +38,7 @@ function addTaskToDiv() {
   btnx.classList.add("btnx")
   div.appendChild(btnx)
 
-  if (add.value.replaceAll(" ", "")) { 
+  if (add.value.replaceAll(" ", "")) {
     div.append(add.value);
     tasks.appendChild(div);
 
@@ -166,13 +165,13 @@ filter.onblur = function () {
 }
 
 filter.onkeyup = function (filtered) {
-  
+
   let allTask = document.querySelectorAll(".task");
-  
+
   allTask.forEach(function (task) {
     let item = task.firstChild.textContent;
-    
-    if(item.toLowerCase().indexOf(filtered.target.value.toLowerCase()) != -1) {
+
+    if (item.toLowerCase().indexOf(filtered.target.value.toLowerCase()) != -1) {
       task.style.display = "block";
     } else {
       task.style.display = "none";
@@ -181,7 +180,7 @@ filter.onkeyup = function (filtered) {
 };
 
 function functionCheck() {
-  if(check.checked) {
+  if (check.checked) {
     document.body.classList.add("moon")
 
     window.localStorage.setItem("check", true)
@@ -192,11 +191,11 @@ function functionCheck() {
   }
 }
 
-function checkFromLocalStorage () {
+function checkFromLocalStorage() {
   let test = JSON.parse(localStorage.getItem("check"))
-  if(test == true) {
+  if (test == true) {
     check.setAttribute("checked", "checked")
-  } else{
+  } else {
     check.removeAttribute("checked")
   }
   functionCheck();
